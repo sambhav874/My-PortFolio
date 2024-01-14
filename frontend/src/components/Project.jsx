@@ -23,8 +23,8 @@ const Projects = () => {
       <div>
         {projectsList.map((project) => (
           <div key={project.id} className="mb-4">
-            <h3 className="text-xl font-semibold">{project.title}</h3>
-            <p className="text-gray-600">{project.description}</p>
+            <h3 className=" text-3xl text-white font-bold ">{project.title}</h3>
+            <p className="text-white font-thin">{project.description}</p>
             {/* Add more project details as needed */}
           </div>
         ))}

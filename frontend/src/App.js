@@ -5,6 +5,7 @@ import particlesConfig from './components/config/particles-config';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './components/Home';
 import Projects from './components/Project';
+import Header from './components/header';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
@@ -81,6 +82,8 @@ function App() {
             {/* Navbar */}
             <Navbar isOpen={navbarOpen} toggleNavbar={toggleNavbar} />
 
+            {window.location.pathname === '/' && <Header />}
+            
             {/* Content */}
             <Routes>
               <Route path="/" element={<Home />} />
