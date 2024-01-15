@@ -46,7 +46,7 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-md shadow-md text-white"
+      className="relative bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-lg shadow-md text-white m-6 "
     >
       {/* Animated Dots */}
       {dots.map((dot) => (
@@ -102,7 +102,7 @@ const Contact = () => {
       {/* Social Media Links */}
       <div>
         <p className="text-sm font-medium mb-2">Connect with me:</p>
-        <ul className="flex space-x-4">
+        <ul className="flex space-x-6 justify-center ">
           <li>
             <a href="https://www.linkedin.com/in/sambhavjain19/" target="_blank" rel="noopener noreferrer" className="text-yellow-300 text-lg font-semibold hover:underline">
               LinkedIn

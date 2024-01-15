@@ -1,6 +1,7 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import headerImg from './resources/header.png';
 import './styles.css'; // Import the CSS file
+import 'tailwindcss/tailwind.css'; // Import Tailwind CSS
 
 function randomText() {
   const options = ['Web Developer', 'Data Analyst'];
@@ -15,7 +16,7 @@ function Header() {
     setText(randomText());
   }, []);
 
-  // useEffect to update text during animation loop
+  // useEffect to update text during the animation loop
   useEffect(() => {
     const interval = setInterval(() => {
       setText(randomText());
@@ -24,23 +25,22 @@ function Header() {
   }, []);
 
   return (
-    <header className="container max-w-full">
-      <div className="blurred-bg"></div>
-      <div className="content">
-        <span className="blur" />
-        <span className="blur" />
-        <h4>CREATE YOUR SITE LIKE A PRO</h4>
-        <h1>
+    
+    <header className="container max-w-full h-screen flex overflow-hidden">
+      
+      <div className="content flex-1 p-6 text-center relative font-thin z-10">
+        <h4>HERE'S A QUICK INTRO</h4>
+        <h1 className="relative">
           Hi, I'm <span>Sambhav</span>,
-          <h2 className="typeWrite font-bold">{text}</h2>
+          <h2 className="typeWrite text-4xl font-bold">{text}</h2>
         </h1>
         <p className="font-thin">
           Hi there, thanks for checking this website. Please provide me your valuable feedback.
         </p>
         <button className="btn">Get Started</button>
       </div>
-      <div className="image md:overflow-hidden">
-        <img src={headerImg} alt="img" />
+      <div className="image flex-1 md:flex hidden">
+        <img className=" object-cover" src={headerImg} alt="img" />
       </div>
     </header>
   );

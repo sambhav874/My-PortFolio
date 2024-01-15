@@ -41,21 +41,21 @@ const SkillSphere = ({ icon, skillName }) => {
     >
       <div
         ref={sphereRef}
-        className="relative w-40 h-40 m-4 rounded-full overflow-hidden lime" // Lime background
+        className="relative w-40  h-40 m-0 rounded-full overflow-hidden lime" // Lime background
         style={{ opacity: '0.5' }}
       >
         <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
           {icon}
         </div>
       </div>
-      <p className="text-3xl mt-2 text-white text-bold text-center">{skillName}</p>
+      <p className="text-md mt-2 text-white font-thin text-center">{skillName}</p>
     </div>
   );
 };
 
 const Skills2 = () => {
   const skillsList = [
-    { name: 'C++', icon: <FaCode className="text-4xl m-2" /> },
+    { name: 'C++', icon: <FaCode className="text-4xl m-2 " /> },
     { name: 'Java', icon: <FaJava className="text-4xl m-2" /> },
     { name: 'Python', icon: <FaPython className="text-4xl m-2" /> },
     { name: 'Trading', icon: <FaHackerNewsSquare className="text-4xl m-2" /> },
@@ -76,13 +76,13 @@ const Skills2 = () => {
   ];
 
   return (
-    <div className="  p-8 rounded shadow-md text-center">
+    <div className="  p-2 rounded shadow-md text-center">
       <h2 className="text-2xl font-bold mb-4 text-white">Skills</h2>
-      <div className="container grid grid-cols-3 m-auto gap-3">
+      <div className="container grid grid-cols-3  gap-3">
         {skillsList.map((skill, index) => (
           <div key={index}>
             <SkillSphere icon={skill.icon} />
-            <p className="text-3xl mt-2 text-white text-bold text-center">{skill.name}</p>
+            <p className="text-md mt-2 text-white font-thin text-center">{skill.name}</p>
           </div>
         ))}
       </div>

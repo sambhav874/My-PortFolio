@@ -61,31 +61,19 @@ function App() {
           <div className="App">
             <Particles id="tsparticles" particlesLoaded={particlesLoaded} options={particlesConfig} />
 
-            {/* Navigation Links */}
-            <nav>
-              <ul style={{ listStyle: 'none', padding: 0 }}>
-                <li style={{ display: 'inline', marginRight: '10px' }}>
-                  <Link to="/">Home</Link>
-                </li>
-                <li style={{ display: 'inline', marginRight: '10px' }}>
-                  <Link to="/projects">Projects</Link>
-                </li>
-                <li style={{ display: 'inline', marginRight: '10px' }}>
-                  <Link to="/skills">Skills</Link>
-                </li>
-                <li style={{ display: 'inline', marginRight: '10px' }}>
-                  <Link to="/contact">Contact</Link>
-                </li>
-              </ul>
-            </nav>
+            
 
             {/* Navbar */}
             <Navbar isOpen={navbarOpen} toggleNavbar={toggleNavbar} />
 
-            {window.location.pathname === '/' && <Header />}
+            
+
+            
             
             {/* Content */}
             <Routes>
+            <Route path="/" exact element={
+            <React.Fragment><Header /><Home/></React.Fragment>} />
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/skills" element={<Skills />} />
