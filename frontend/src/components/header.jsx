@@ -20,30 +20,28 @@ function Header() {
   useEffect(() => {
     const interval = setInterval(() => {
       setText(randomText());
-    }, 3000); // Set the interval duration to match the typing animation duration
+    }, 1000); // Set the interval duration to match the typing animation duration
     return () => clearInterval(interval);
   }, []);
 
   return (
-    
-    <header className="container max-w-full h-screen flex overflow-hidden">
-      
+    <header className="container max-w-full h-screen flex overflow-hidden relative text-center">
       <div className="content flex-1 p-6 text-center relative font-thin z-10">
         <h4>HERE'S A QUICK INTRO</h4>
-        <h1 className="relative">
-          Hi, I'm <span>Sambhav</span>,
-          <h2 className="typeWrite text-4xl font-bold">{text}</h2>
-        </h1>
-        <p className="font-thin">
+        <h1 className="relative">Hi, I'm <span>Sambhav</span>,</h1>
+        <h2 className="typeWrite  text-4xl md:text-3xl font-bold text-white mb-4">{text}</h2>
+        <p className="font-thin relative">
           Hi there, thanks for checking this website. Please provide me your valuable feedback.
         </p>
         <button className="btn">Get Started</button>
       </div>
-      <div className="image flex-1 md:flex hidden">
-        <img className=" object-cover" src={headerImg} alt="img" />
+      <div className="image w-min flex-1 md:flex hidden">
+        <img className="object-cover" src={headerImg} alt="img" />
       </div>
     </header>
   );
 }
 
 export default Header;
+
+

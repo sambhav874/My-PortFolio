@@ -23,7 +23,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className=" text-white pt-10 px-6 pb-2 flex justify-end items-center shadow-lg top-0  z-50">
+    <div className="text-white pt-10 px-6 pb-2 flex justify-end items-center shadow-lg top-0 z-50">
       <button
         className="text-white text-2xl md:hidden"
         onClick={toggleSidebar}
@@ -49,15 +49,18 @@ const Navbar = () => {
             </Link>
           </li>
           <li>
+            <Link to="/portfolio" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              Portfolio
+            </Link>
+          </li>
+          <li>
             <Link to="/contact" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
               Contact
             </Link>
           </li>
         </ul>
       ) : (
-        <div className={`fixed top-0 left-0 w-64 h-full bg-gray-800 bg-opacity-45 text-white transition-all duration-300 ${
-          isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}>
+        <div className={`fixed top-0 left-0 w-64 h-full bg-gray-800 bg-opacity-45 text-white transition-all duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`} style={{ zIndex: 1000 }}>
           <button className="absolute top-4 right-4 m-4 text-white" onClick={toggleSidebar}>
             &times;
           </button>
@@ -75,6 +78,11 @@ const Navbar = () => {
             <li>
               <Link to="/skills" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
                 Skills
+              </Link>
+            </li>
+            <li>
+              <Link to="/portfolio" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+                Portfolio
               </Link>
             </li>
             <li>
