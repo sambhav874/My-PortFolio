@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-      <h2  className="text-4xl  mb-8 text-white font-thin">
+      <h2  className="text-4xl mt-[8%] mb-8 text-white font-thin">
         About Me
       </h2>
 

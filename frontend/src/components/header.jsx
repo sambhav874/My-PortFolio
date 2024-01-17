@@ -27,11 +27,11 @@ function Header() {
 
 
   return (
-    <header className="container max-w-full h-screen flex overflow-hidden relative text-center">
+    <header className="container max-w-full h-full flex overflow-hidden relative text-center">
       <div className="content flex-1 p-6 text-center relative font-thin z-10">
         <h4>HERE'S A QUICK INTRO</h4>
         <h1 className="relative">Hi, I'm <span>Sambhav</span>,</h1>
-        <h2 className="typeWrite  text-5xl md:text-3xl font-bold text-white mb-4">{text}</h2>
+        <h2 className="typeWrite  text-3xl  font-bold text-white mb-4">{text}</h2>
         <p className="font-thin relative">
           Hi there, thanks for checking this website. Please provide me your valuable feedback.
         </p>

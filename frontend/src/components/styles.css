@@ -113,6 +113,7 @@ header {
   box-shadow: 0 0 1000px 50px #1d4ed8;
   z-index: -100;
 }
+
 .typeWrite {
   width: 100%;
   white-space: nowrap;
@@ -127,7 +128,8 @@ header {
     width: 0;
   }
   to {
-    width: 100%; }
+    width: 100%;
+  }
 }
 
 @keyframes cursor {

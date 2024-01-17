@@ -46,7 +46,7 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative bg-gradient-to-r from-gray-800 to-gray-900 p-8 rounded-lg shadow-md text-white m-6 "
+      className="relative bg-gradient-to-r bg-slate-800 p-8 rounded-lg shadow-md text-white m-6 bg-opacity-50"
     >
       {/* Animated Dots */}
       {dots.map((dot) => (
@@ -70,7 +70,7 @@ const Contact = () => {
         onSubmit={handleFeedbackSubmit}
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-        className="mb-8"
+        className="mb-8 "
       >
         <label htmlFor="feedback" className="block text-sm font-medium mb-2">
           Feedback:
