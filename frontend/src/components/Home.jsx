@@ -1,63 +1,17 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaUniversity, FaCode, FaSwimmingPool, FaGithub } from 'react-icons/fa';
-import Helmet from 'react-helmet';
+import { FaUniversity, FaCode, FaJava, FaGithub } from 'react-icons/fa';
 
 
-function MyComponent() {
-  return (
-    <div>
 
-      
-<Helmet>
 
-        
-<link
-
-          
-rel="preconnect"
- 
-href="https://fonts.googleapis.com"
-        />
-
-        
-<link
-
-          
-rel="preconnect"
- 
-href="https://fonts.gstatic.com"
- 
-crossorigin
-        />
-
-        
-<link
-
-          
-href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
-
-          
-rel="stylesheet"
-        />
-
-      
-</Helmet>
-      {/* Rest of your component's content */}
-    </div>
-  );
-}
 
 const Home = () => {
-  const textVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { delay: 0.3, duration: 0.8 } },
-  };
-
+  
   const infoData = [
     { icon: <FaUniversity className="text-4xl mb-2" />, text: 'Pursuing B.Sc. in Computer Science (Honours) at Aryabhatta College, University of Delhi' },
     { icon: <FaCode className="text-4xl mb-2" />, text: 'Passionate about coding, exploring new technologies, and working with Python and Java' },
-    { icon: <FaSwimmingPool className="text-4xl mb-2" />, text: 'Enjoys swimming in free time and contributing to various projects on GitHub' },
+    { icon: <FaJava className="text-4xl mb-2" />, text: 'Enjoys coding in free time and contributing to various projects on GitHub' },
     { icon: <FaGithub className="text-4xl mb-2" />, text: 'Check out my GitHub profile to see some of my coding adventures' },
   ];
 
@@ -68,7 +22,7 @@ const Home = () => {
       </h2>
 
       {/* Cards for the First 3 Objects */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 mt-16 mx-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 mt-16 mx-3">
   {infoData.slice(0, 3).map((item, index) => (
     <motion.div
       key={index}

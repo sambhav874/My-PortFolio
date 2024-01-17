@@ -1,0 +1,25 @@
+.type {
+  display: inline-block;
+  overflow: hidden;
+  border-right: 0.05em solid white; /* Add a border to represent the cursor */
+  white-space: nowrap;
+  margin: 1px; /* Remove default h1 margin */
+  animation:
+    typing 3s  ,
+    blinkCursor 1s  infinite alternate; /* Adjust cursor blink speed */
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blinkCursor {
+  to {
+    border-color: transparent;
+  }
+}

@@ -2,33 +2,18 @@ import React from 'react';
 
 const Portfolio = () => {
   const skills = [
-    'C++',
-    'Java',
-    'Python',
-    'Trading',
-    'Algorithms',
-    'CSS',
-    'Coding',
-    'Data Analysis',
-    'Data Structures',
-    'Ethical Hacking',
-    'Front-End Development',
-    'Git',
-    'GitHub',
-    'Linux',
-    'Machine Learning',
-    'Microsoft Azure',
-    'MongoDB',
-    'Node.js',
-    'Operating Systems',
-    'SQL',
+    'C++', 'Java', 'Python', 'Trading', 'Algorithms', 'CSS', 'Coding',
+    'Data Analysis', 'Data Structures', 'Ethical Hacking', 'Front-End Development',
+    'Git', 'GitHub', 'Linux', 'Machine Learning', 'Microsoft Azure', 'MongoDB',
+    'Node.js', 'Operating Systems', 'SQL',
   ];
 
   return (
-    
-    <div className="container items-center text-left mx-4 my-4 mt-10 p-4 bg-opacity-10 text-white bg-black">
-      <div className="text-left mb-4 border-b-[1px] pb-4 border-white">
-        <h1 className="text-4xl font-bold mb-2 animate__animated animate-fadeInDown ">Sambhav Jain</h1>
+    <div className="container mx-2 py-8 px-2 mt-10 bg-opacity-10 text-white bg-black text-left ">
+      <div className="mb-8 border-b-[1px] pb-4 border-white">
+        <h1 className="text-4xl font-bold mb-2 animate__animated animate-fadeInDown hover:text-blue-500">
+          Sambhav Jain
+        </h1>
         <p className="text-xl mb-2 font-thin">110092</p>
         <p className="text-xl mb-2 font-thin">sambhavjain874@gmail.com</p>
         <p className="text-xl mb-2 font-thin">9873291449</p>
@@ -44,16 +29,14 @@ const Portfolio = () => {
         </p>
       </div>
 
-      <div className="mt-8 animate__animated animate__fadeInLeft font-thin border-b-[1px] pb-4 border-white">
+      <div className="mt-8 animate__animated animate__fadeInLeft font-thin border-b-[1px] pb-4 border-white w-[95%]">
         <h2 className="text-2xl font-bold mb-4">Summary</h2>
         <p className="text-justify mb-4">
           As an ambitious university student, I am pursuing Bachelor of Science in Computer Science (Honours) at Aryabhatta College, University of Delhi with a passion for coding and exploring new technologies. I am driven to continually expand my knowledge and skills. With experience working in several well-known libraries in both Python and Java, my interests lie in machine learning, data structures, and trading technologies. I am always eager to take on new challenges and grow in these areas. In my free time, I enjoy swimming and coding, and my GitHub profile showcases some of my work.
         </p>
-
         <p className="text-justify mb-4">
           Along with my proficiency in Python and Java, I am also familiar with CSS, Tailwind CSS, SQL, and C++. As an added advantage, I am also familiar with Git on a basic level, allowing me to effectively collaborate and manage code repositories. Additionally, I recently pursued Ethical Hacking from IIT Kharagpur on the SWAYAM portal that made me enhance my skill set. As a major sector of interest, I find it fascinating to work on trading technologies.
         </p>
-
         <p className="text-justify mb-4">
           I am an incredibly focused and goal-oriented individual who never gives up. I thrive on challenges and remain determined until I achieve my objectives. While I am passionate about learning and exploring new technologies, I also value the importance of taking time to enjoy my own peace and engage in quiet contemplation.
         </p>
@@ -96,9 +79,14 @@ const Portfolio = () => {
 
       <div className="mt-8 animate__animated animate__fadeInUp">
         <h2 className="text-2xl font-bold mb-4">Skills</h2>
-        <ul className=" grid grid-cols-4 mx-auto font-thin mb-4">
+        <ul className="grid grid-cols-4 gap-4 mx-auto font-thin">
           {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
+            <li
+              key={index}
+              className="hover:bg-blue-500 hover:text-white p-2 rounded-md transition duration-300"
+            >
+              {skill}
+            </li>
           ))}
         </ul>
       </div>

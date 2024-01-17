@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import 'typeface-jetbrains-mono';
+import './nav_.css';
+
+
 
 const Navbar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -25,10 +29,10 @@ const Navbar = () => {
   const handleLinkClick = () => {
     setIsSidebarOpen(false); // Close sidebar with animation
   };
-  
 
   return (
-    <div className="text-white pt-10 px-6 pb-2 flex justify-end items-center shadow-lg top-0 z-50">
+    <div className="text-white pt-10 px-6 pb-2 flex justify-between items-center shadow-lg top-0 z-50"><span>
+      <h1 className="text-2xl md:text-3xl text-left font-bold  tracking-wider font-mono type" >Sambhav Jain</h1></span>
       <button
         className="text-white text-2xl md:hidden"
         onClick={toggleSidebar}

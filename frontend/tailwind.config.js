@@ -5,9 +5,10 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
+      mono: ['JetBrains Mono', 'monospace'],
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/typography'),],
 }
 

@@ -76,8 +76,8 @@ const Skills2 = () => {
   ];
 
   return (
-    <div className="  p-2 rounded shadow-md text-center">
-      <h2 className="text-2xl font-bold mb-4 text-white">Skills</h2>
+    <div className="  p-2 rounded shadow-md mt-10 text-center">
+      <h2 className="text-3xl font-bold mb-3 text-white">Skills</h2>
       <div className="container grid grid-cols-3  gap-3">
         {skillsList.map((skill, index) => (
           <div key={index}>

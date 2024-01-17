@@ -10,6 +10,7 @@ import Header from './components/header';
 import Skills from './components/Skills';
 import Contact from './components/Contact';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 import './App.css';
 
 class ErrorBoundary extends React.Component {
@@ -74,7 +75,12 @@ function App() {
               <Route path="/skills" element={<Skills />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<Contact />} />
+
+              
+        
             </Routes>
+
+            <Footer />
           </div>
         </ErrorBoundary>
       </Router>
