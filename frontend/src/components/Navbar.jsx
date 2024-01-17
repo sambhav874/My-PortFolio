@@ -22,6 +22,11 @@ const Navbar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
 
+  const handleLinkClick = () => {
+    setIsSidebarOpen(false); // Close sidebar with animation
+  };
+  
+
   return (
     <div className="text-white pt-10 px-6 pb-2 flex justify-end items-center shadow-lg top-0 z-50">
       <button
@@ -60,33 +65,33 @@ const Navbar = () => {
           </li>
         </ul>
       ) : (
-        <div className={`fixed top-0 left-0 w-64 h-full bg-gray-800 bg-opacity-45 text-white transition-all duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`} style={{ zIndex: 1000 }}>
+        <div className={`fixed top-0 left-0 w-full h-full bg-gray-800 bg-opacity-45 text-white transition-all duration-300 ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}`} style={{ zIndex: 1000 }}>
           <button className="absolute top-4 right-4 m-4 text-white" onClick={toggleSidebar}>
             &times;
           </button>
           <ul className="py-4 mt-8 space-y-8">
             <li>
-              <Link to="/" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              <Link to="/" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold" onClick={handleLinkClick}>
                 Home
               </Link>
             </li>
             <li>
-              <Link to="/projects" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              <Link to="/projects" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold" onClick={handleLinkClick}>
                 Projects
               </Link>
             </li>
             <li>
-              <Link to="/skills" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              <Link to="/skills" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold" onClick={handleLinkClick}>
                 Skills
               </Link>
             </li>
             <li>
-              <Link to="/portfolio" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              <Link to="/portfolio" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold" onClick={handleLinkClick}>
                 Portfolio
               </Link>
             </li>
             <li>
-              <Link to="/contact" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold">
+              <Link to="/contact" className="text-white hover:animate-pulse hover:text-indigo-500 text-2xl font-bold" onClick={handleLinkClick}>
                 Contact
               </Link>
             </li>
