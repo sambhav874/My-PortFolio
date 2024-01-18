@@ -1,15 +1,33 @@
 // client/src/components/Contact.js
-import React from 'react';
+import React,{useState} from 'react';
 import { motion } from 'framer-motion';
+import contactApi from '../api/contactApi'
+
 
 const Contact = () => {
-  const handleFeedbackSubmit = (event) => {
-    event.preventDefault();
-    // Implement the logic for handling feedback
-    // You can use state or a function to handle the feedback submission
-    alert('Feedback submitted!'); // Replace this with your actual logic
+  
+  const [user, setUser] = useState({ name: '', email: '', feedback: '' });
+
+  const handleInputs = (e) => {
+    const { name, value } = e.target;
+    setUser({ ...user, [name]: value });
   };
 
+  const handleFeedbackSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      // Use the frontend API to submit feedback
+      const response = await contactApi.submitFeedback(user);
+
+      // Display success message
+      alert(response.message);
+    } catch (error) {
+      console.error('Error submitting feedback:', error);
+      // Display error message
+      alert(`Error submitting feedback. Please try again.   ${error}`);
+    }
+  };
   const containerVariants = {
     hidden: { opacity: 0, y: -20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
@@ -66,30 +84,59 @@ const Contact = () => {
       </p>
 
       {/* Feedback Form */}
-      <motion.form
+      <form
         onSubmit={handleFeedbackSubmit}
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0, transition: { duration: 0.5 } }}
-        className="mb-8 "
+        className="mb-8 " 
+        method='POST'
       >
-        <label htmlFor="feedback" className="block text-sm font-medium mb-2">
-          Feedback:
-        </label>
-        <textarea
-          id="feedback"
-          name="feedback"
-          rows="4"
-          className="mt-1 p-3 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white"
-          placeholder="Type your feedback here..."
-        ></textarea>
-        <motion.button
-          type="submit"
-          whileHover={{ scale: 1.05 }}
-          className="mt-4 px-8 py-3 bg-yellow-500 text-gray-900 rounded-md focus:outline-none hover:bg-yellow-600 transform transition-transform"
-        >
-          Send
-        </motion.button>
-      </motion.form>
+        <label htmlFor="name" className="block text-xl font-thin mb-2 text-left">
+    Name:
+  </label>
+  <input
+    type="text"
+    id="name"
+    name="name"  // Make sure the name attribute is set
+    className="mt-1 p-3 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white"
+    placeholder="Your Name"
+    onChange={handleInputs}
+  />
+
+  <label htmlFor="email" className="block text-xl font-thin mt-4 mb-2 text-left">
+    Email:
+  </label>
+  <input
+    type="email"
+    id="email"
+    name="email"  // Make sure the name attribute is set
+    className="mt-1 p-3 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white"
+    placeholder="Your Email"
+    onChange={handleInputs}
+  />
+
+  <label htmlFor="feedback" className="block text-xl font-thin mt-4 mb-2 text-left">
+    Query:
+  </label>
+  <textarea
+    id="feedback"
+    name="feedback"  // Make sure the name attribute is set
+    rows="4"
+    className="mt-1 p-3 border rounded-md w-full focus:outline-none focus:ring focus:border-blue-300 bg-gray-700 text-white"
+    placeholder="Type your feedback here..."
+    onChange={handleInputs}
+  ></textarea>
+
+<button
+  type="submit"
+  whileHover={{ scale: 1.05 }}
+  onClick={(event) => handleFeedbackSubmit(event)}  // Pass the event object
+  className="mt-4 px-8 py-3 bg-yellow-500 text-gray-900 rounded-md focus:outline-none hover:bg-yellow-600 transform transition-transform"
+>
+  Send
+</button>
+
+      </form>
 
       {/* Email Link */}
       <div className="mb-8">
