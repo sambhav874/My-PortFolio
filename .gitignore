@@ -23,7 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 node_modules/
-
 # Client-side
 server/node_modules/
 # Add other client-side build directories if applicable
