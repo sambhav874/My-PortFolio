@@ -30,7 +30,7 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         console.log('Fetching projects...');
-        const response = await axios.get('http://localhost:4007/project/get');
+        const response = await axios.get('https://sambhavj.onrender.com/project/get');
         console.log('Data Loaded:', response.data);
         setProjectsList(response.data);
       } catch (error) {

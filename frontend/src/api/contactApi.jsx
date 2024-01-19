@@ -4,7 +4,7 @@ import axios from 'axios';
 const contactApi = {
   submitFeedback: async (feedbackData) => {
     try {
-      const response = await axios.post('http://localhost:4007/contact/submit', feedbackData);
+      const response = await axios.post('https://sambhavj.onrender.com/contact/submit', feedbackData);
       return response.data;
     } catch (error) {
       console.error('Error submitting feedback:', error);

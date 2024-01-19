@@ -5,7 +5,7 @@ require("dotenv").config();
 const { setupServer } = require('./server-status'); // Separate server setup
 
 const app = express();
-const PORT = process.env.PORT || 4007;
+const PORT = 'https://sambhavj.onrender.com;'
 
 app.use(cors());
 app.use(express.json());
@@ -24,5 +24,5 @@ mongoose.connect(process.env.mongoURI, {
 setupServer(app); // Pass the app to the setupServer function
 
 app.listen(PORT, () => {
-  console.log(`Server is running on http://localhost:${PORT}`);
+  console.log(`Server is running on https://sambhavj.onrender.com`);
 });
