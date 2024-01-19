@@ -7,7 +7,7 @@ const submitContactForm = async(req , res) => {
         const contactSubmission = new Contact({name , email , feedback});
         
         await contactSubmission.save();
-        await sendFeedbackReply(email, name);
+        await sendFeedbackReply(email, name , feedback);
 
         res.json({ message: 'Feedback submitted successfully!' });
     }catch(error){
