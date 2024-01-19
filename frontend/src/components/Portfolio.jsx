@@ -9,7 +9,7 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="container mx-2 py-8 px-2 mt-10 bg-opacity-10 text-white bg-black text-left ">
+    <div className="container mx-2 py-8 px-2 mt-10 bg-opacity-25 text-white  bg-slate-800 text-left ">
       <div className="mb-8 border-b-[1px] pb-4 border-white">
         <h1 className="text-4xl font-bold mb-2 animate__animated animate-fadeInDown hover:text-blue-500">
           Sambhav Jain

@@ -37,6 +37,7 @@ class ErrorBoundary extends React.Component {
   }
 }
 
+
 function logErrorToService(error, errorInfo) {
   // Implement your error tracking service logic here
   console.error(error, errorInfo);

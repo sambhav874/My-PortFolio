@@ -64,7 +64,7 @@ const Contact = () => {
       initial="hidden"
       animate="visible"
       variants={containerVariants}
-      className="relative bg-gradient-to-r bg-slate-800 p-8 rounded-lg shadow-md text-white m-6 bg-opacity-50"
+      className="relative bg-slate-800 p-8 rounded-lg shadow-md text-white m-6 bg-opacity-50"
     >
       {/* Animated Dots */}
       {dots.map((dot) => (

@@ -25,10 +25,11 @@ yarn-error.log*
 node_modules/
 
 # Client-side
-client/node_modules/
+server/node_modules/
 # Add other client-side build directories if applicable
 client/build/
 client/dist/
 
 # Environment variables
 .env
+server/.env
