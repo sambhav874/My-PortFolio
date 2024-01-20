@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import defaultProjects from './defaultProjects'; // Import default projects
+ // Import default projects
 
 // A reusable component for a single project card
 const ProjectCard = ({ project }) => (
@@ -30,15 +30,17 @@ const Projects = () => {
     const fetchProjects = async () => {
       try {
         console.log('Fetching projects...');
-        const response = await axios.get('https://sambhavj.onrender.com/project/get');
+        const response = await axios.get('https://sambhavj.onrender.com/projects/');
         console.log('Data Loaded:', response.data);
         setProjectsList(response.data);
       } catch (error) {
-        console.error('Error fetching projects:', error);
-        // Use default projects if server request fails
-        setProjectsList(defaultProjects);
+        console.error('Error fetching projects:', error.response); 
+        // Handle the error, display a message to the user, or perform other actions
+        // You can set an error state here if needed
       }
     };
+    
+    
   
     fetchProjects();
   }, []);

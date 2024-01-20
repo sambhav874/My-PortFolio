@@ -1,5 +1,4 @@
-
-const Project = require('../models/Project');
+const Project = require('../models/project'); // Adjust the path accordingly
 
 const getProjects = async (req, res) => {
   try {
@@ -13,8 +12,8 @@ const getProjects = async (req, res) => {
 
 const createProject = async (req, res) => {
   try {
-    const { title, description, link } = req.body;
-    const newProject = new Project({ title, description, link });
+    const { id, title, description, link } = req.body; // Ensure you send 'id' in the request body
+    const newProject = new Project({ id, title, description, link });
     const savedProject = await newProject.save();
     res.status(201).json(savedProject);
   } catch (error) {
