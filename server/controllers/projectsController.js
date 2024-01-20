@@ -1,4 +1,4 @@
-const Project = require('../models/project'); // Adjust the path accordingly
+const Project = require('../models/Project'); // Adjust the path accordingly
 
 const getProjects = async (req, res) => {
   try {
