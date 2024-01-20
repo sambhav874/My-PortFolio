@@ -26,24 +26,21 @@ const ProjectCard = ({ project }) => (
 const Projects = () => {
   const [projectsList, setProjectsList] = useState([]);
 
+
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        console.log('Fetching projects...');
-        const response = await axios.get('https://sambhavj.onrender.com/projects/');
-        console.log('Data Loaded:', response.data);
+        const response = await axios.get('https://sambhavj.onrender.com/api/projects');
         setProjectsList(response.data);
       } catch (error) {
-        console.error('Error fetching projects:', error.response); 
-        // Handle the error, display a message to the user, or perform other actions
-        // You can set an error state here if needed
+        console.error('Error fetching projects:', error.response);
       }
     };
-    
-    
-  
+
     fetchProjects();
   }, []);
+
+
 
   return (
     <div className="p-8 rounded shadow-md mb-12">
