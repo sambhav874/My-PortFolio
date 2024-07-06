@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.b82703c7.css",
-    "main.js": "/static/js/main.0b1cbb3d.js",
+    "main.js": "/static/js/main.890bd901.js",
     "static/js/787.9e9f4ffd.chunk.js": "/static/js/787.9e9f4ffd.chunk.js",
     "static/media/Resume-Sambhav-Jain.pdf": "/static/media/Resume-Sambhav-Jain.fc7c424c3c37f23e86c0.pdf",
     "static/media/JetBrainsMono-BoldItalic.woff2": "/static/media/JetBrainsMono-BoldItalic.2b5e1891c9a11403b72a.woff2",
@@ -23,11 +23,11 @@
     "static/media/header.png": "/static/media/header.8ccecc64d48ed9418a40.png",
     "index.html": "/index.html",
     "main.b82703c7.css.map": "/static/css/main.b82703c7.css.map",
-    "main.0b1cbb3d.js.map": "/static/js/main.0b1cbb3d.js.map",
+    "main.890bd901.js.map": "/static/js/main.890bd901.js.map",
     "787.9e9f4ffd.chunk.js.map": "/static/js/787.9e9f4ffd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b82703c7.css",
-    "static/js/main.0b1cbb3d.js"
+    "static/js/main.890bd901.js"
   ]
 }
